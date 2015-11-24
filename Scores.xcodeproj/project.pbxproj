@@ -390,6 +390,7 @@
 				EC50BDDA1C049047002152D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EC50BDDB1C049047002152D8 /* Build configuration list for PBXNativeTarget "ScoresTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +399,7 @@
 				EC50BDDD1C049047002152D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
