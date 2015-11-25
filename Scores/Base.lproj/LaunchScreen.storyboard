@@ -16,9 +16,29 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aFt-M8-NXQ" userLabel="ProductName">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" staticText="YES" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="88"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aFt-M8-NXQ" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Vt7-QH-O8f"/>
+                            <constraint firstItem="aFt-M8-NXQ" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" id="eLv-xn-bMx"/>
+                            <constraint firstItem="aFt-M8-NXQ" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" id="mfA-yS-kTT"/>
+                            <constraint firstItem="aFt-M8-NXQ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="yH6-EJ-Ta6"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
