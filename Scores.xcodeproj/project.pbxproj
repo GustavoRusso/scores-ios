@@ -13,6 +13,8 @@
 		EC50BDC61C049047002152D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC50BDC51C049047002152D8 /* Assets.xcassets */; };
 		EC50BDC91C049047002152D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC50BDC71C049047002152D8 /* LaunchScreen.storyboard */; };
 		EC50BDD41C049047002152D8 /* ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC50BDD31C049047002152D8 /* ScoresTests.swift */; };
+		ECDFC16E1C074DEC001C0C18 /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */; };
+		ECDFC1701C07521C001C0C18 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		EC50BDCF1C049047002152D8 /* ScoresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC50BDD31C049047002152D8 /* ScoresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTests.swift; sourceTree = "<group>"; };
 		EC50BDD51C049047002152D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddLocation.storyboard; path = Location/AddLocation.storyboard; sourceTree = "<group>"; };
+		ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLocationViewController.swift; path = Location/AddLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,7 @@
 		EC50BDBD1C049047002152D8 /* Scores */ = {
 			isa = PBXGroup;
 			children = (
+				ECDFC16C1C074AE4001C0C18 /* Location */,
 				EC50BDBE1C049047002152D8 /* AppDelegate.swift */,
 				EC50BDC01C049047002152D8 /* ViewController.swift */,
 				EC50BDC21C049047002152D8 /* Main.storyboard */,
@@ -94,6 +99,15 @@
 				EC50BDD51C049047002152D8 /* Info.plist */,
 			);
 			path = ScoresTests;
+			sourceTree = "<group>";
+		};
+		ECDFC16C1C074AE4001C0C18 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */,
+				ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +196,7 @@
 				EC50BDC91C049047002152D8 /* LaunchScreen.storyboard in Resources */,
 				EC50BDC61C049047002152D8 /* Assets.xcassets in Resources */,
 				EC50BDC41C049047002152D8 /* Main.storyboard in Resources */,
+				ECDFC16E1C074DEC001C0C18 /* AddLocation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC50BDC11C049047002152D8 /* ViewController.swift in Sources */,
+				ECDFC1701C07521C001C0C18 /* AddLocationViewController.swift in Sources */,
 				EC50BDBF1C049047002152D8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

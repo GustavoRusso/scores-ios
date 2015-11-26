@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +20,15 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func segueToAddNewScore(sender: UIBarButtonItem) {
+        let addNewScoreStoryboard: UIStoryboard = UIStoryboard(name: "AddLocation", bundle: nil)
+        let addNewScoreViewController = addNewScoreStoryboard.instantiateInitialViewController()
+        self.presentViewController(addNewScoreViewController!, animated:  true, completion: nil)
+    }
+    
+    @IBAction func cancelFromAddNewScore(segue:UIStoryboardSegue) {
+        
+    }
 
 }
 
