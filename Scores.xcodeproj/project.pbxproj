@@ -13,6 +13,10 @@
 		EC50BDC61C049047002152D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC50BDC51C049047002152D8 /* Assets.xcassets */; };
 		EC50BDC91C049047002152D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC50BDC71C049047002152D8 /* LaunchScreen.storyboard */; };
 		EC50BDD41C049047002152D8 /* ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC50BDD31C049047002152D8 /* ScoresTests.swift */; };
+		EC52E5861C09D97D00DB5249 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52E5851C09D97D00DB5249 /* LocationManagerDelegate.swift */; };
+		EC63F4871C16CCD900A13CB1 /* ConfigureLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC63F4861C16CCD900A13CB1 /* ConfigureLocation.storyboard */; };
+		EC9E7E9B1C0CCC81009DF486 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9E7E9A1C0CCC81009DF486 /* LocationManager.swift */; };
+		ECA8CC541C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA8CC531C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift */; };
 		ECDFC16E1C074DEC001C0C18 /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */; };
 		ECDFC1701C07521C001C0C18 /* AddLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +42,10 @@
 		EC50BDCF1C049047002152D8 /* ScoresTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoresTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC50BDD31C049047002152D8 /* ScoresTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresTests.swift; sourceTree = "<group>"; };
 		EC50BDD51C049047002152D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC52E5851C09D97D00DB5249 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManagerDelegate.swift; path = Location/LocationManagerDelegate.swift; sourceTree = "<group>"; };
+		EC63F4861C16CCD900A13CB1 /* ConfigureLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ConfigureLocation.storyboard; sourceTree = "<group>"; };
+		EC9E7E9A1C0CCC81009DF486 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Location/LocationManager.swift; sourceTree = "<group>"; };
+		ECA8CC531C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigureLocationPageViewController.swift; path = Location/ConfigureLocationPageViewController.swift; sourceTree = "<group>"; };
 		ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddLocation.storyboard; path = Location/AddLocation.storyboard; sourceTree = "<group>"; };
 		ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddLocationViewController.swift; path = Location/AddLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +114,10 @@
 			children = (
 				ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */,
 				ECDFC16F1C07521C001C0C18 /* AddLocationViewController.swift */,
+				EC52E5851C09D97D00DB5249 /* LocationManagerDelegate.swift */,
+				EC9E7E9A1C0CCC81009DF486 /* LocationManager.swift */,
+				EC63F4861C16CCD900A13CB1 /* ConfigureLocation.storyboard */,
+				ECA8CC531C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift */,
 			);
 			name = Location;
 			sourceTree = "<group>";
@@ -161,6 +173,11 @@
 					EC50BDBA1C049047002152D8 = {
 						CreatedOnToolsVersion = 7.1.1;
 						DevelopmentTeam = R72B4JFAE4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					EC50BDCE1C049047002152D8 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -195,6 +212,7 @@
 			files = (
 				EC50BDC91C049047002152D8 /* LaunchScreen.storyboard in Resources */,
 				EC50BDC61C049047002152D8 /* Assets.xcassets in Resources */,
+				EC63F4871C16CCD900A13CB1 /* ConfigureLocation.storyboard in Resources */,
 				EC50BDC41C049047002152D8 /* Main.storyboard in Resources */,
 				ECDFC16E1C074DEC001C0C18 /* AddLocation.storyboard in Resources */,
 			);
@@ -214,7 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC52E5861C09D97D00DB5249 /* LocationManagerDelegate.swift in Sources */,
+				ECA8CC541C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift in Sources */,
 				EC50BDC11C049047002152D8 /* ViewController.swift in Sources */,
+				EC9E7E9B1C0CCC81009DF486 /* LocationManager.swift in Sources */,
 				ECDFC1701C07521C001C0C18 /* AddLocationViewController.swift in Sources */,
 				EC50BDBF1C049047002152D8 /* AppDelegate.swift in Sources */,
 			);

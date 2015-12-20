@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WWh-VC-h98">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--Configure Location Page View Controller-->
+        <scene sceneID="PGN-NP-zNT">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="B1b-FB-5jd" customClass="ConfigureLocationPageViewController" customModule="Scores" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Wa2-3N-lQc"/>
+                        <barButtonItem systemItem="cancel" id="iIC-Fc-Obf">
+                            <connections>
+                                <segue destination="0cB-Ib-qA3" kind="unwind" unwindAction="cancelFromConfigureLocation:" id="fFo-fg-2MU"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <navigationItem key="navigationItem" id="3CI-Ts-pvR"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5a0-Df-YrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0cB-Ib-qA3" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1289" y="602"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="u50-Ui-Lxu">
+            <objects>
+                <viewController storyboardIdentifier="ScoresLocationIntro" id="7me-9D-mix" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mtD-m2-F8q"/>
+                        <viewControllerLayoutGuide type="bottom" id="CrM-bu-59l"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="04o-Wp-Zeo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores Location Use Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aey-6q-sjA" userLabel="ScoresLocationUseDescription">
+                                <rect key="frame" x="175" y="289" width="250" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="ScoresLocationUseDescription"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aey-6q-sjA" firstAttribute="centerX" secondItem="04o-Wp-Zeo" secondAttribute="centerX" id="EN0-TD-koB"/>
+                            <constraint firstItem="Aey-6q-sjA" firstAttribute="centerY" secondItem="04o-Wp-Zeo" secondAttribute="centerY" id="vhS-NT-6wa"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bx8-nt-9HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1985" y="597"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="M4E-B6-qjS">
+            <objects>
+                <viewController storyboardIdentifier="LocationAuthorization" id="Iie-MR-mxI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lEB-iK-all"/>
+                        <viewControllerLayoutGuide type="bottom" id="wIE-1Q-8vn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WC8-Bm-GSm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When In Use Authorization Status Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtX-5g-a07" userLabel="WhenInUseAuthorizationStatusDescription">
+                                <rect key="frame" x="125" y="289" width="350" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vtX-5g-a07" firstAttribute="centerY" secondItem="WC8-Bm-GSm" secondAttribute="centerY" id="52n-u8-JGr"/>
+                            <constraint firstItem="vtX-5g-a07" firstAttribute="centerX" secondItem="WC8-Bm-GSm" secondAttribute="centerX" id="fhz-vT-R4u"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6h-mT-fdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2653" y="599"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nJJ-UD-UXt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="WWh-VC-h98" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xAn-Ak-XPb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eVs-fs-RLt">
+                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="B1b-FB-5jd" kind="relationship" relationship="rootViewController" id="JOG-az-gab"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgh-cV-hkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="602"/>
+        </scene>
+    </scenes>
+</document>
