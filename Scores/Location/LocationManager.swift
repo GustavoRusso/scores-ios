@@ -20,7 +20,7 @@ class LocationManager {
   
     func isProperlyConfigured() -> Bool{
         if(!CLLocationManager.locationServicesEnabled()){ return false }
-        
+
         switch CLLocationManager.authorizationStatus() {
         case .NotDetermined, .Denied, .Restricted:
             return false

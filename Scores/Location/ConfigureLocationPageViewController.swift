@@ -1,47 +1,62 @@
 import UIKit
 
-class ConfigureLocationPageViewController: UIPageViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate {
+class ConfigureLocationPageViewController: UIPageViewController, UIPageViewControllerDelegate {
 
-    var pages = [UIViewController]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
         self.dataSource = self
         
-        let page1: UIViewController! = storyboard?.instantiateViewControllerWithIdentifier("ScoresLocationIntro")
-        let page2: UIViewController! = storyboard?.instantiateViewControllerWithIdentifier("LocationAuthorization")
-        
-        pages.append(page1)
-        pages.append(page2)
-        
-        setViewControllers([page1], direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
+        let firstPage: LocationIntroViewController! = storyboard!.instantiateViewController()
+        setViewControllers([firstPage],
+            direction: UIPageViewControllerNavigationDirection.Forward,
+            animated: false,
+            completion: nil)
+
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController)!
-        if(currentIndex == 0) {return nil}
-        return pages[currentIndex-1]
+}
+
+
+
+extension ConfigureLocationPageViewController: UIPageViewControllerDataSource {
+    
+    private var storyboardIds: [String] {
+        return [
+            LocationIntroViewController.storyboardIdentifier,
+            LocationAuthorizationViewController.storyboardIdentifier
+        ]
     }
     
-    func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
-        let currentIndex = pages.indexOf(viewController)!
-        if(currentIndex == pages.count-1) {return nil}
-        return pages[currentIndex+1]
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
+            let currentStoryboardId = viewController.dynamicType.storyboardIdentifier
+            let currentIndex = storyboardIds.indexOf(currentStoryboardId)
+            if(currentIndex == nil || currentIndex == 0) {return nil}
+            let beforeStoryboardId = storyboardIds[currentIndex!-1]
+            return storyboard!.instantiateViewControllerWithIdentifier(beforeStoryboardId)
+    }
+    
+    func pageViewController(pageViewController: UIPageViewController,
+        viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
+            let currentStoryboardId = viewController.dynamicType.storyboardIdentifier
+            let currentIndex = storyboardIds.indexOf(currentStoryboardId)
+            if(currentIndex == nil || currentIndex == storyboardIds.count-1) {return nil}
+            let afterStoryboardId = storyboardIds[currentIndex!+1]
+            return storyboard!.instantiateViewControllerWithIdentifier(afterStoryboardId)
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return pages.count
+        return storyboardIds.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return 0
+        return storyboardIds.indices.first!
     }
     
-
 }
