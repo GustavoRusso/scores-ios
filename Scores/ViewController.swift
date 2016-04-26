@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         self.presentViewController(addNewScoreViewController!, animated:  true, completion: nil)
     }
     
-    @IBAction func cancelFromAddNewScore(segue:UIStoryboardSegue) {
+    @IBAction func unwindToMainController(segue:UIStoryboardSegue) {
         
     }
 

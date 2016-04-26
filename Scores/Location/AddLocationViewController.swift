@@ -89,6 +89,6 @@ class AddLocationViewController: UITableViewController {
     }
     */
 
-    @IBAction func cancelFromConfigureLocation(segue:UIStoryboardSegue) {        
+    @IBAction func unwindToAddLocation(segue:UIStoryboardSegue) {
     }
 }

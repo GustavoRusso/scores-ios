@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WWh-VC-h98">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1b-FB-5jd">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -83,6 +83,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-e3-qAh">
                                                         <rect key="frame" x="270" y="0.0" width="270" height="30"/>
                                                         <state key="normal" title="No thanks"/>
+                                                        <connections>
+                                                            <segue destination="duc-kj-u7c" kind="unwind" unwindAction="unwindToAddLocation:" id="TIq-Pu-zXl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <constraints>
@@ -104,6 +107,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bx8-nt-9HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="duc-kj-u7c" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1985" y="597"/>
         </scene>
@@ -128,13 +132,29 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-HR-Wt4">
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-kS-7C3">
                                         <rect key="frame" x="0.0" y="21" width="600" height="30"/>
-                                        <state key="normal" title="Go to settings"/>
-                                        <connections>
-                                            <action selector="goToSettings:" destination="Iie-MR-mxI" eventType="touchUpInside" id="Aix-7H-pUh"/>
-                                        </connections>
-                                    </button>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-HR-Wt4">
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
+                                                <state key="normal" title="Go to settings"/>
+                                                <connections>
+                                                    <action selector="goToSettings:" destination="Iie-MR-mxI" eventType="touchUpInside" id="Aix-7H-pUh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFp-Qe-Yfv">
+                                                <rect key="frame" x="300" y="0.0" width="300" height="30"/>
+                                                <state key="normal" title="No thanks"/>
+                                                <connections>
+                                                    <segue destination="yEn-Z9-YQj" kind="unwind" unwindAction="unwindToAddLocation:" id="mCC-Ew-KYf"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="vFp-Qe-Yfv" firstAttribute="width" secondItem="Xq6-kS-7C3" secondAttribute="width" multiplier="0.5" id="np2-iR-yyX"/>
+                                            <constraint firstItem="KBy-HR-Wt4" firstAttribute="width" secondItem="Xq6-kS-7C3" secondAttribute="width" multiplier="0.5" id="tSX-BG-N8E"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -147,30 +167,9 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6h-mT-fdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="yEn-Z9-YQj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2653" y="599"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="nJJ-UD-UXt">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" toolbarHidden="NO" id="WWh-VC-h98" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xAn-Ak-XPb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="eVs-fs-RLt">
-                        <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="B1b-FB-5jd" kind="relationship" relationship="rootViewController" id="JOG-az-gab"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgh-cV-hkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="477" y="602"/>
         </scene>
     </scenes>
 </document>
