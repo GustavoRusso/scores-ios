@@ -20,6 +20,7 @@
 		EC50BDD41C049047002152D8 /* ScoresTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC50BDD31C049047002152D8 /* ScoresTests.swift */; };
 		EC52E5861C09D97D00DB5249 /* LocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC52E5851C09D97D00DB5249 /* LocationManagerDelegate.swift */; };
 		EC771C861C2FDF5A00DCCA2C /* LocationAuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC771C851C2FDF5A00DCCA2C /* LocationAuthorizationViewController.swift */; };
+		EC854CF31D356BE4001B2695 /* OptionallyInstantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC854CF21D356BE4001B2695 /* OptionallyInstantiable.swift */; };
 		EC9E7E9B1C0CCC81009DF486 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9E7E9A1C0CCC81009DF486 /* LocationManager.swift */; };
 		ECA8CC541C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA8CC531C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift */; };
 		ECDFC16E1C074DEC001C0C18 /* AddLocation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */; };
@@ -54,6 +55,7 @@
 		EC50BDD51C049047002152D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC52E5851C09D97D00DB5249 /* LocationManagerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManagerDelegate.swift; path = Location/LocationManagerDelegate.swift; sourceTree = "<group>"; };
 		EC771C851C2FDF5A00DCCA2C /* LocationAuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationAuthorizationViewController.swift; path = Location/LocationAuthorizationViewController.swift; sourceTree = "<group>"; };
+		EC854CF21D356BE4001B2695 /* OptionallyInstantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionallyInstantiable.swift; path = UIKit/OptionallyInstantiable.swift; sourceTree = "<group>"; };
 		EC9E7E9A1C0CCC81009DF486 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Location/LocationManager.swift; sourceTree = "<group>"; };
 		ECA8CC531C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigureLocationPageViewController.swift; path = Location/ConfigureLocationPageViewController.swift; sourceTree = "<group>"; };
 		ECDFC16D1C074DEC001C0C18 /* AddLocation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddLocation.storyboard; path = Location/AddLocation.storyboard; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				EC4D21911C95B66000A40DFD /* UIStoryboardExtension.swift */,
 				EC4D21971C95DC9B00A40DFD /* UIViewControllerExtension.swift */,
 				EC0194341CA3152E00F44CD3 /* PageViewControllerDataSourceByIdentifiers.swift */,
+				EC854CF21D356BE4001B2695 /* OptionallyInstantiable.swift */,
 			);
 			name = UIKit;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				EC52E5861C09D97D00DB5249 /* LocationManagerDelegate.swift in Sources */,
 				EC4D21981C95DC9B00A40DFD /* UIViewControllerExtension.swift in Sources */,
 				ECA8CC541C1FF59B00E71F72 /* ConfigureLocationPageViewController.swift in Sources */,
+				EC854CF31D356BE4001B2695 /* OptionallyInstantiable.swift in Sources */,
 				EC50BDC11C049047002152D8 /* ViewController.swift in Sources */,
 				EC0194351CA3152E00F44CD3 /* PageViewControllerDataSourceByIdentifiers.swift in Sources */,
 				EC4D21921C95B66000A40DFD /* UIStoryboardExtension.swift in Sources */,

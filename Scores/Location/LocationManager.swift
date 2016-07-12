@@ -29,4 +29,11 @@ class LocationManager {
         }
     }
     
+    func authorizationStillHasToBeDetermined() -> Bool {
+        if (CLLocationManager.authorizationStatus() == .notDetermined) {
+            return true
+        }
+        return false
+    }
+    
 }

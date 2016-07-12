@@ -2,19 +2,16 @@ import UIKit
 
 class ConfigureLocationPageViewController: UIPageViewController, UIPageViewControllerDelegate  {
     
-    var identifiersToPaginate: [String] {
-        get {
-            return [
-                LocationIntroViewController.storyboardIdentifier,
-                LocationAuthorizationViewController.storyboardIdentifier
-            ]
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.delegate = self
+        
+        var identifiersToPaginate: [String] = [String]()
+        if(LocationIntroViewController.shouldBeInstantiated()) {
+            identifiersToPaginate.append(LocationIntroViewController.storyboardIdentifier)
+        }        
+        identifiersToPaginate.append(LocationAuthorizationViewController.storyboardIdentifier)
         
         let dataSourceByIdentifiers = PageViewControllerDataSourceByIdentifiers(fromStoryboard: storyboard!, identifiersToPaginate: identifiersToPaginate)
         self.dataSource = dataSourceByIdentifiers

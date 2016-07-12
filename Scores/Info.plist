@@ -34,9 +34,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>Your location will be used to keep track of your visits to specific place</string>
+	<string>The App can automatically score each visit to a tagged place</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location will be suggested as a new place to keep track</string>
+	<string>Your location can be suggested as a new place to tag</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
