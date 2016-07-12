@@ -10,9 +10,9 @@ class LocationIntroViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    @IBAction func goToSettings(sender: UIButton) {
-        if let appSettings = NSURL(string: "prefs:root=LOCATION_SERVICES") {
-            UIApplication.sharedApplication().openURL(appSettings)
+    @IBAction func goToSettings(_ sender: UIButton) {
+        if let appSettings = URL(string: "prefs:root=LOCATION_SERVICES") {
+            UIApplication.shared().open(appSettings, options: [String : AnyObject](), completionHandler: nil)
         }
     }
 }

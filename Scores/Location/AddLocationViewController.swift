@@ -19,7 +19,7 @@ class AddLocationViewController: UITableViewController {
         if(!LocationManager().isProperlyConfigured()) {
             let configureLocationServicesStoryboard: UIStoryboard = UIStoryboard(name: "ConfigureLocation", bundle: nil)
             let configureLocationServicesViewController = configureLocationServicesStoryboard.instantiateInitialViewController()
-            self.presentViewController(configureLocationServicesViewController!, animated:  true, completion: nil)
+            self.present(configureLocationServicesViewController!, animated:  true, completion: nil)
         }
     }
 
@@ -29,17 +29,17 @@ class AddLocationViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 0
     }
 
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)            
-            cell.textLabel?.text = "indexPath.row: \(indexPath.row)"
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)            
+            cell.textLabel?.text = "indexPath.row: \((indexPath as NSIndexPath).row)"
             cell.detailTextLabel?.text = ""
             return cell
     }
@@ -89,6 +89,6 @@ class AddLocationViewController: UITableViewController {
     }
     */
 
-    @IBAction func unwindToAddLocation(segue:UIStoryboardSegue) {
+    @IBAction func unwindToAddLocation(_ segue:UIStoryboardSegue) {
     }
 }

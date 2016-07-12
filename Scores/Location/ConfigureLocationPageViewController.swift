@@ -20,7 +20,7 @@ class ConfigureLocationPageViewController: UIPageViewController, UIPageViewContr
         self.dataSource = dataSourceByIdentifiers
         
         setViewControllers([dataSourceByIdentifiers.instantiateInitialPage()],
-                           direction: UIPageViewControllerNavigationDirection.Forward,
+                           direction: UIPageViewControllerNavigationDirection.forward,
                            animated: false,
                            completion: nil)
     }

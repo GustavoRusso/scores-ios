@@ -22,7 +22,7 @@ class LocationManager {
         if(!CLLocationManager.locationServicesEnabled()){ return false }
 
         switch CLLocationManager.authorizationStatus() {
-        case .NotDetermined, .Denied, .Restricted:
+        case .notDetermined, .denied, .restricted:
             return false
         default:
             return true

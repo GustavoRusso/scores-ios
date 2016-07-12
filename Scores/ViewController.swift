@@ -20,13 +20,13 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func segueToAddNewScore(sender: UIBarButtonItem) {
+    @IBAction func segueToAddNewScore(_ sender: UIBarButtonItem) {
         let addNewScoreStoryboard: UIStoryboard = UIStoryboard(name: "AddLocation", bundle: nil)
         let addNewScoreViewController = addNewScoreStoryboard.instantiateInitialViewController()
-        self.presentViewController(addNewScoreViewController!, animated:  true, completion: nil)
+        self.present(addNewScoreViewController!, animated:  true, completion: nil)
     }
     
-    @IBAction func unwindToMainController(segue:UIStoryboardSegue) {
+    @IBAction func unwindToMainController(_ segue:UIStoryboardSegue) {
         
     }
 
