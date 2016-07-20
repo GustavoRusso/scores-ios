@@ -1,116 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="B1b-FB-5jd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Iie-MR-mxI">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Configure Location Page View Controller-->
-        <scene sceneID="PGN-NP-zNT">
-            <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="B1b-FB-5jd" customClass="ConfigureLocationPageViewController" customModule="Scores" customModuleProvider="target" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <toolbarItems>
-                        <barButtonItem systemItem="cancel" id="iIC-Fc-Obf">
-                            <connections>
-                                <segue destination="0cB-Ib-qA3" kind="unwind" unwindAction="cancelFromConfigureLocation:" id="fFo-fg-2MU"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Wa2-3N-lQc"/>
-                    </toolbarItems>
-                    <navigationItem key="navigationItem" id="3CI-Ts-pvR"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="5a0-Df-YrG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="0cB-Ib-qA3" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1289" y="602"/>
-        </scene>
-        <!--Location Intro View Controller-->
-        <scene sceneID="u50-Ui-Lxu">
-            <objects>
-                <viewController storyboardIdentifier="LocationIntroViewController" id="7me-9D-mix" customClass="LocationIntroViewController" customModule="Scores" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="mtD-m2-F8q"/>
-                        <viewControllerLayoutGuide type="bottom" id="CrM-bu-59l"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="04o-Wp-Zeo">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="IL3-EZ-2Bd">
-                                <rect key="frame" x="30" y="40" width="540" height="144"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using your location" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNf-OY-Woc" userLabel="Title">
-                                        <rect key="frame" x="0.0" y="0.0" width="540" height="33"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores uses your location to suggest places to track." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aey-6q-sjA" userLabel="ScoresLocationUseDescription">
-                                        <rect key="frame" x="0.0" y="33" width="540" height="20"/>
-                                        <accessibility key="accessibilityConfiguration" label="ScoresLocationUseDescription"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="y9Z-Ul-U5U">
-                                        <rect key="frame" x="0.0" y="53" width="540" height="91"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turn On Location Services" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8V-DA-UpO">
-                                                <rect key="frame" x="0.0" y="0.0" width="540" height="20"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yja-hL-TA8">
-                                                <rect key="frame" x="0.0" y="20" width="540" height="41"/>
-                                                <string key="text">Location Services are currently disabled on your device. You need to enable them in order to allow any App to determine your location</string>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Csb-LG-i5e">
-                                                <rect key="frame" x="0.0" y="61" width="540" height="30"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrj-H9-k32">
-                                                        <rect key="frame" x="0.0" y="0.0" width="270" height="30"/>
-                                                        <state key="normal" title="Go to settings"/>
-                                                        <connections>
-                                                            <action selector="goToSettings:" destination="7me-9D-mix" eventType="touchUpInside" id="ONG-eS-l4n"/>
-                                                        </connections>
-                                                    </button>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ov-e3-qAh">
-                                                        <rect key="frame" x="270" y="0.0" width="270" height="30"/>
-                                                        <state key="normal" title="No thanks"/>
-                                                        <connections>
-                                                            <segue destination="duc-kj-u7c" kind="unwind" unwindAction="unwindToAddLocation:" id="TIq-Pu-zXl"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="Rrj-H9-k32" firstAttribute="width" secondItem="Csb-LG-i5e" secondAttribute="width" multiplier="0.5" id="gH7-5y-s8N"/>
-                                                    <constraint firstItem="9ov-e3-qAh" firstAttribute="width" secondItem="Csb-LG-i5e" secondAttribute="width" multiplier="0.5" id="vr5-mL-DGx"/>
-                                                </constraints>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="IL3-EZ-2Bd" firstAttribute="centerX" secondItem="04o-Wp-Zeo" secondAttribute="centerX" id="6lq-36-kgx"/>
-                            <constraint firstItem="IL3-EZ-2Bd" firstAttribute="top" secondItem="mtD-m2-F8q" secondAttribute="bottom" constant="20" id="973-YX-iF9"/>
-                            <constraint firstItem="IL3-EZ-2Bd" firstAttribute="width" secondItem="04o-Wp-Zeo" secondAttribute="width" multiplier="0.9" id="uRN-6w-RyP"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bx8-nt-9HA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="duc-kj-u7c" userLabel="Exit" sceneMemberID="exit"/>
-            </objects>
-            <point key="canvasLocation" x="1985" y="597"/>
-        </scene>
         <!--Location Authorization View Controller-->
         <scene sceneID="M4E-B6-qjS">
             <objects>
@@ -120,56 +16,99 @@
                         <viewControllerLayoutGuide type="bottom" id="wIE-1Q-8vn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WC8-Bm-GSm">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="w0d-GJ-HMt">
-                                <rect key="frame" x="0.0" y="40" width="600" height="51"/>
+                            <stackView opaque="NO" contentMode="top" preservesSuperviewLayoutMargins="YES" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="w0d-GJ-HMt">
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="When In Use Authorization Status Description" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtX-5g-a07" userLabel="WhenInUseAuthorizationStatusDescription">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xq6-kS-7C3">
-                                        <rect key="frame" x="0.0" y="21" width="600" height="30"/>
+                                    <stackView opaque="NO" contentMode="top" preservesSuperviewLayoutMargins="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qmL-2d-NNp" userLabel="Header">
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-HR-Wt4">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="30"/>
-                                                <state key="normal" title="Go to settings"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Using your location" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vtX-5g-a07" userLabel="HeaderTitle">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores uses your location to track the times that you visit a place." textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KHz-ZJ-jIG" userLabel="HeaderIntroduction">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="top" preservesSuperviewLayoutMargins="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QMK-F2-f65" userLabel="authorizeAlways">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Automatically score each visit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNu-ie-j83" userLabel="AlwaysTitle">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jN-25-YDw" userLabel="AlwaysDescription">
+                                                <string key="text">The App will score your visits automatically, even if it is running in the background.  This mode discharges the battery around 5% each day in return for doing all the hard work for you.  To choose this mode, press "Allow always".</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="top" preservesSuperviewLayoutMargins="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="V3A-Qg-ezY" userLabel="authorizeWhenInUse">
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Knowing your current position" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TjY-FB-k3h" userLabel="InUseTitle">
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ovy-5u-r2Y" userLabel="InUseDescription">
+                                                <string key="text">Your location can be suggested as a new place to track your visits.  However you have to manually score each visit.  To choose this mode, press "Allow when in use".</string>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="3RB-yN-A11" userLabel="Buttons">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YMJ-ry-j9d">
+                                                <state key="normal" title="Allow Always"/>
                                                 <connections>
-                                                    <action selector="goToSettings:" destination="Iie-MR-mxI" eventType="touchUpInside" id="Aix-7H-pUh"/>
+                                                    <action selector="requestAlwaysAuthorization:" destination="Iie-MR-mxI" eventType="touchUpInside" id="I5o-3j-u9e"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFp-Qe-Yfv">
-                                                <rect key="frame" x="300" y="0.0" width="300" height="30"/>
-                                                <state key="normal" title="No thanks"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="KBy-HR-Wt4">
+                                                <state key="normal" title="Allow when in use"/>
                                                 <connections>
-                                                    <segue destination="yEn-Z9-YQj" kind="unwind" unwindAction="unwindToAddLocation:" id="mCC-Ew-KYf"/>
+                                                    <action selector="requestWhenInUseAuthorization:" destination="Iie-MR-mxI" eventType="touchUpInside" id="kp7-Mg-INA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="PyN-xV-Gjz">
+                                                <state key="normal" title="Not Now"/>
+                                                <connections>
+                                                    <action selector="notNow:" destination="Iie-MR-mxI" eventType="touchUpInside" id="PQy-WA-pBz"/>
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="vFp-Qe-Yfv" firstAttribute="width" secondItem="Xq6-kS-7C3" secondAttribute="width" multiplier="0.5" id="np2-iR-yyX"/>
-                                            <constraint firstItem="KBy-HR-Wt4" firstAttribute="width" secondItem="Xq6-kS-7C3" secondAttribute="width" multiplier="0.5" id="tSX-BG-N8E"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="qmL-2d-NNp" firstAttribute="top" secondItem="w0d-GJ-HMt" secondAttribute="top" id="1iO-Kz-bP8"/>
+                                    <constraint firstItem="V3A-Qg-ezY" firstAttribute="width" secondItem="w0d-GJ-HMt" secondAttribute="width" id="8Zv-e8-lYo"/>
+                                    <constraint firstItem="3RB-yN-A11" firstAttribute="width" secondItem="w0d-GJ-HMt" secondAttribute="width" id="R8q-I6-lWP"/>
+                                    <constraint firstItem="qmL-2d-NNp" firstAttribute="width" secondItem="w0d-GJ-HMt" secondAttribute="width" id="WFc-Lg-RZZ"/>
+                                    <constraint firstItem="QMK-F2-f65" firstAttribute="width" secondItem="w0d-GJ-HMt" secondAttribute="width" id="gkk-sz-Sfv"/>
+                                </constraints>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="w0d-GJ-HMt" firstAttribute="top" secondItem="lEB-iK-all" secondAttribute="bottom" constant="20" id="M3Y-ej-JBD"/>
-                            <constraint firstItem="w0d-GJ-HMt" firstAttribute="centerX" secondItem="WC8-Bm-GSm" secondAttribute="centerX" id="da5-bH-LOK"/>
-                            <constraint firstItem="w0d-GJ-HMt" firstAttribute="width" secondItem="WC8-Bm-GSm" secondAttribute="width" id="rQr-ZO-TWa"/>
+                            <constraint firstItem="w0d-GJ-HMt" firstAttribute="leading" secondItem="WC8-Bm-GSm" secondAttribute="leadingMargin" id="XLr-Wu-eWQ"/>
+                            <constraint firstItem="w0d-GJ-HMt" firstAttribute="top" secondItem="lEB-iK-all" secondAttribute="bottom" constant="8" symbolic="YES" id="anR-bV-C4w"/>
+                            <constraint firstItem="wIE-1Q-8vn" firstAttribute="top" secondItem="w0d-GJ-HMt" secondAttribute="bottom" constant="8" symbolic="YES" id="eFl-B8-xGR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w0d-GJ-HMt" secondAttribute="trailing" id="pmB-Xq-ibV"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6h-mT-fdJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="yEn-Z9-YQj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2653" y="599"/>
+            <point key="canvasLocation" x="2652" y="598.65067466266873"/>
         </scene>
     </scenes>
 </document>

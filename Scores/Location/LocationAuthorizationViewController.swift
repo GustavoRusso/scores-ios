@@ -1,6 +1,6 @@
 import UIKit
 
-class LocationAuthorizationViewController: UIViewController {
+class LocationAuthorizationViewController: UIViewController, OptionallyInstantiable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -9,12 +9,22 @@ class LocationAuthorizationViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
 
-    @IBAction func goToSettings(_ sender: UIButton) {
-        if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
-            UIApplication.shared().open(appSettings, options: [String : AnyObject](), completionHandler: nil)
-        }
+    static func shouldBeInstantiated() -> Bool {
+        return !LocationManager().isAllowed()
     }
-
+    
+    @IBAction func requestAlwaysAuthorization(_ sender: UIButton) {
+        LocationManager().requestAuthorization(requestedStatus: .authorizedAlways)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func requestWhenInUseAuthorization(_ sender: UIButton) {
+        LocationManager().requestAuthorization(requestedStatus: .authorizedWhenInUse)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func notNow(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

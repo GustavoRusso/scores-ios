@@ -16,10 +16,10 @@ class AddLocationViewController: UITableViewController {
     }
     
     func segueToConfigureLocationServicesIfNeeded() {
-        if(!LocationManager().isProperlyConfigured()) {
+        if(LocationAuthorizationViewController.shouldBeInstantiated()) {
             let configureLocationServicesStoryboard: UIStoryboard = UIStoryboard(name: "ConfigureLocation", bundle: nil)
             let configureLocationServicesViewController = configureLocationServicesStoryboard.instantiateInitialViewController()
-            self.present(configureLocationServicesViewController!, animated:  true, completion: nil)
+            self.present(configureLocationServicesViewController!, animated:  true)
         }
     }
 

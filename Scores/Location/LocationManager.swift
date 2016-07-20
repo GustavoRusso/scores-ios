@@ -1,5 +1,6 @@
 import Foundation
 import CoreLocation
+import UIKit
 
 class LocationManager {
     
@@ -18,7 +19,7 @@ class LocationManager {
         return getCLLocationManager().delegate!;
     }
   
-    func isProperlyConfigured() -> Bool{
+    func isAllowed() -> Bool{
         if(!CLLocationManager.locationServicesEnabled()){ return false }
 
         switch CLLocationManager.authorizationStatus() {
@@ -30,10 +31,26 @@ class LocationManager {
     }
     
     func authorizationStillHasToBeDetermined() -> Bool {
-        if (CLLocationManager.authorizationStatus() == .notDetermined) {
-            return true
+        return (CLLocationManager.authorizationStatus() == .notDetermined)
+    }
+    
+    func requestAuthorization(requestedStatus: CLAuthorizationStatus) {
+        
+        if (authorizationStillHasToBeDetermined()) {
+            switch requestedStatus {
+                case .authorizedWhenInUse:
+                    getCLLocationManager().requestWhenInUseAuthorization()
+                case .authorizedAlways:
+                    getCLLocationManager().requestAlwaysAuthorization()
+                default:
+                    break
+            }
+            return
         }
-        return false
+        
+        if let appSettings = URL(string: UIApplicationOpenSettingsURLString) {
+            UIApplication.shared().open(appSettings, options: [String : AnyObject](), completionHandler: nil)
+        }
     }
     
 }
